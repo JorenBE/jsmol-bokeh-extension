@@ -3,7 +3,7 @@ from os import path
 from bokeh.core.properties import Instance, String, Dict
 from bokeh.models import ColumnDataSource, LayoutDOM
 from bokeh.util.compiler import TypeScript
-
+print('test')
 directory = path.dirname(path.realpath(__file__))
 with open(path.join(directory, 'jsmol.ts'), 'r', encoding='utf8') as f:
     TS_CODE = f.read()

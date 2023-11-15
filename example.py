@@ -2,7 +2,7 @@
 from bokeh.models import ColumnDataSource
 from bokeh.io import show, curdoc
 from bokeh.models.widgets import Button, TextInput
-from bokeh.layouts import layout, widgetbox
+from bokeh.layouts import layout
 
 from jsmol_bokeh_extension import JSMol
 
@@ -37,7 +37,7 @@ def run_script():
 
 button.on_click(run_script)
 
-ly = layout([applet, widgetbox(button, inp_script)])
+ly = layout([applet, button, inp_script])
 curdoc().add_root(ly)
 
 show(ly)
